@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+}
+body {
+  background: linear-gradient(to right, black, rgb(22, 44, 68));
+  color: antiquewhite;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.console {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100vw;
+  height: 100vh;
+  row-gap: 0.4rem;
+  background-color: blanchedalmond;
+  column-gap: 0.4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.box {
+  background: linear-gradient(
+    to right,
+    rgb(22, 44, 68),
+    black,
+    rgb(22, 44, 68)
+  );
+  color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 7.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+.box:hover {
+  background: linear-gradient(to right, black, rgb(22, 44, 68) black);
+  border: 3px solid white;
+}
+
+.startgame {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translatey(-70%);
+  height: 100vh;
+  transition: transform 1s ease-in-out 0.5s;
+  /* display: none; */
+}
+.heading {
+  font-size: 6rem;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn {
+  padding: 1rem 2rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  background: transparent;
+  color: antiquewhite;
+  border: none;
+  font-weight: bolder;
+}
+.btn:hover {
+  background-color: antiquewhite;
+  color: black;
+}
+.player {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  width: 70vw;
+  top: 10vh;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  transition: transform 1s ease-in-out 0.5s;
+  transform: translatex(150%);
+}
+input {
+  margin-bottom: 1.5rem;
+  outline: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  width: 26.9rem;
+  text-transform: capitalize;
+  background-color: blanchedalmond;
+  height: 2.9rem;
+  font-size: 2rem;
+}
+label {
+  font-size: 2.3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.result {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.8s ease-in-out 0.1s;
+  z-index: -1;
+  opacity: 0;
+  /* display: none; */
+}
+.result_container {
+  font-size: 6rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: antiquewhite;
+}
+@media screen and (max-width: 1050px) {
+  html {
+    font-size: 55%;
+    overflow: hidden;
+  }
+  .heading {
+    font-size: 4.6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 45%;
+    overflow: hidden;
+  }
+  .heading {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 558px) {
+  html {
+    overflow: hidden;
+
+    font-size: 40%;
+  }
+  .heading {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 35%;
+    overflow: hidden;
+  }
+}
